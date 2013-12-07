@@ -9,16 +9,16 @@
     public
         $sleep;
         
-    public function __construct($name, $key)
+    public function __construct($name, $key = "", $dbOn = "on", $type = "i")
     {
-        $this->sleep = 500;
+        $this->sleep = .5;
+        $this->cfgCon($name, $key, $dbOn, $type)
         
     }
     
     public function methodCaller($service, $callArray)
     {
-         = (int)$this->sleep;
-        sleep($sleep);
+        sleep($this->sleep);
         return parent::methodCaller($service, $callArray);
     }
  
